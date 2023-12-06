@@ -36,7 +36,7 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 	float timeElasped = 0
 
 	; break out after modelLoadtimeoutSeconds if model is not going to load
-	While (!clonedActor.Is3DLoaded() & timeElasped < modelLoadtimeoutSeconds)
+	While (!clonedActor.Is3DLoaded() && timeElasped < modelLoadtimeoutSeconds)
 	  Utility.Wait(0.05)
 	  timeElasped = Utility.GetCurrentRealTime() - t0
 	EndWhile
